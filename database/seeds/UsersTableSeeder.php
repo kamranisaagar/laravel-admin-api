@@ -33,7 +33,11 @@ class UsersTableSeeder extends Seeder
         User::create([
             'name'              => 'Normal User',
             'email'             => 'user@test.com',
-            'password'          => '123456'
+            'password'          => '123456',
+            'phone_number'             => '0123456789',
+            'address'           => 'somewhere in the world',
+            'country_code'      => 'AU',
+            'country'           => 'Australia'
         ]);
     }
 }

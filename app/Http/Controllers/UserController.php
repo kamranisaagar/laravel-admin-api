@@ -11,11 +11,11 @@ class UserController extends Controller
 {
     public function __construct()
     {
-        $this->middleware(['auth:api', 'role:administrator']);
+        $this->middleware(['auth:api', 'permission:access-customers']);
     }
 
     public function getUsers()
     {
-        return fractal(User::all(), new UserTransformer())->respond();
+        return fractal(User::role('customer')->get(), new UserTransformer())->respond();
     }
 }

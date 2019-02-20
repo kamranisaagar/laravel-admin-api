@@ -18,16 +18,16 @@ class PermissionRoleTableSeeder extends Seeder
     public function run()
     {
         // Create Roles
-        $admin = Role::create(['name' => 'Administrator']);
-        $moderator = Role::create(['name' => 'Moderator']);
-        $customer = Role::create(['name' => 'Customer']);
+        $admin = Role::create(['name' => 'administrator']);
+        $moderator = Role::create(['name' => 'moderator']);
+        $customer = Role::create(['name' => 'customer']);
 
         // Create Permissions
         Permission::create(['name' => 'access-customers']);
         Permission::create(['name' => 'access-sales']);
         Permission::create(['name' => 'access-reports']);
 
-        $admin->syncPermissions(['access-reports', 'access-sales', 'access-reports']);
+        $admin->syncPermissions(['access-customers', 'access-sales', 'access-reports']);
         $moderator->givePermissionTo(['access-sales', 'access-reports']);
         $customer->givePermissionTo(['access-reports']);
 
