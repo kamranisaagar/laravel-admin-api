@@ -26,6 +26,6 @@ Route::group([
 Route::group([
     'middleware' => 'api'
 ], function ($router) {
-    Route::get('users', 'UserController@getUsers');
+    Route::resource('users', 'UserController');
     Route::resource('pages', 'PageController');
 });
