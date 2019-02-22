@@ -36,6 +36,7 @@ class UsersTableSeeder extends Seeder
             'password'          => '123456',
             'phone_number'             => '0123456789',
             'address'           => 'somewhere in the world',
+            'company'           => 'Big Fish',
             'country_code'      => 'AU',
             'country'           => 'Australia'
         ]);

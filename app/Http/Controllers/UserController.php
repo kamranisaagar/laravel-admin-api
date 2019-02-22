@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Transformer\UserTransformer;
+use App\Transformer\UserDetailTransformer;
 
 class UserController extends Controller
 {
@@ -22,7 +23,7 @@ class UserController extends Controller
 
     public function show(User $user)
     {
-        return fractal($user, new UserTransformer())->toArray();
+        return fractal($user, new UserDetailTransformer())->toArray();
     }
 
     public function update(User $user, Request $request)
@@ -32,6 +33,6 @@ class UserController extends Controller
         $user->company = $request->company;
         $user->address = $request->address;
         $user->save();
-        return fractal($user, new UserTransformer())->toArray();
+        return fractal($user, new UserDetailTransformer())->toArray();
     }
 }
