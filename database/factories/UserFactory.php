@@ -22,7 +22,6 @@ $factory->define(App\Models\User::class, function (Faker $faker) {
         'phone_number' => $faker->phoneNumber,
         'address' => $faker->address,
         'company' => $faker->company,
-        'country_code' => $faker->countryCode,
-        'country' => $faker->country,
+        'country_code' => $faker->countryCode
     ];
 });

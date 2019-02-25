@@ -16,7 +16,7 @@ class CustomersSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Models\User::class, 50)->create()
+        factory(App\Models\User::class, 200)->create()
             ->each(function($user) {
                 $user->assignRole('customer');
             });

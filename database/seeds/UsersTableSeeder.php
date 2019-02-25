@@ -21,13 +21,13 @@ class UsersTableSeeder extends Seeder
         User::create([
             'name'              => 'Admin User',
             'email'             => 'admin@test.com',
-            'password'          => '123456'
+            'password'          => '123456',
         ]);
 
         User::create([
             'name'              => 'Moderator User',
             'email'             => 'moderator@test.com',
-            'password'          => '123456'
+            'password'          => '123456',
         ]);
 
         User::create([
@@ -37,8 +37,7 @@ class UsersTableSeeder extends Seeder
             'phone_number'             => '0123456789',
             'address'           => 'somewhere in the world',
             'company'           => 'Big Fish',
-            'country_code'      => 'AU',
-            'country'           => 'Australia'
+            'country_code'      => 'AU'
         ]);
     }
 }

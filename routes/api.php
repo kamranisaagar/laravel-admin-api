@@ -28,4 +28,5 @@ Route::group([
 ], function ($router) {
     Route::resource('users', 'UserController');
     Route::resource('pages', 'PageController');
+    Route::get('statistics/customers', 'StatisticsController@getCustomersCountriesStatistics');
 });
